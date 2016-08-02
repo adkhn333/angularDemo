@@ -1,0 +1,30 @@
+Order By: 
+<select ng-model="sortColumn">
+    <option value="+name">Name ASC</option>
+    <option value="+gender">Gender ASC</option>
+    <option value="+dateOfBirth">DOB ASC</option>
+    <option value="+salary">Salary ASC</option>
+</select>
+Search <input type="text" placeholder="Search By Employee Name or Salary" ng-model="searchText">  
+<br>
+<label for="checkBox">Hide Salary</label>  
+<input type="checkbox" ng-model="hideSalary" name="checkBox">    
+<table> 
+    <thead>
+        <tr>
+            <th ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></th>
+            <th ng-click="sortData('dateOfBirth')">Date Of Birth <div ng-class="getSortClass('dateOfBirth')"></div></th>
+            <th ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></th>
+            <th ng-hide="hideSalary" ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees | filter:search | orderBy:sortColumn:reverseSort">
+            {{search}}
+            <td> {{ employee.name}} </td>
+            <td> {{ employee.dateOfBirth | date:"dd/MM/yyyy"}} </td>
+            <td> {{ employee.gender | gender}} </td>
+            <td ng-hide="hideSalary"> {{ employee.salary | number:2 }} </td>
+        </tr>
+    </tbody>
+</table>

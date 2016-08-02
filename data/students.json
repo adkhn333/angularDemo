@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Tony",
+        "gender": "Male",
+        "address": "London"
+    },
+    {
+        "id": "2",
+        "name": "Mary",
+        "gender": "Female",
+        "address": "London"
+    },
+    {
+        "id": "3",
+        "name": "John",
+        "gender": "Male",
+        "address": "New York"
+    },
+    {
+        "id": "4",
+        "name": "Matt",
+        "gender": "Male",
+        "address": "France"
+    },
+    {
+        "id": "5",
+        "name": "Eliza",
+        "gender": "Female",
+        "address": "Cape Town"
+    },
+    {
+        "id": "6",
+        "name": "Parker",
+        "gender": "Male",
+        "address": "South Africa"
+    }
+]
